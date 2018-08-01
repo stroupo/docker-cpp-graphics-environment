@@ -1,0 +1,1 @@
+# Docker Container for Building and Testing C++ Applications based on Qt5 and OpenGL
