@@ -12,8 +12,8 @@ label \
 run \
   apt-get update && \
   apt-get install -y \
-    freeglut3 \
-    freeglut3-dev \
+    freeglut3 freeglut3-dev \
+    glew-utils libglew2.0 libglew-dev \
     qt5-default \
   && rm -rf /var/lib/apt/lists/*
 
