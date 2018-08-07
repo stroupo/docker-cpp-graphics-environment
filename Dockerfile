@@ -16,3 +16,14 @@ run \
     freeglut3-dev \
     qt5-default \
   && rm -rf /var/lib/apt/lists/*
+
+# install latest glm library
+workdir /tmp
+run git clone https://github.com/g-truc/glm.git --depth=1 --branch master --single-branch glm
+workdir glm/build
+run \
+  cmake -D CMAKE_BUILD_TYPE=Release .. && \
+  cmake --build . && \
+  cmake --build . --target install
+workdir /
+run rm -rf /tmp/glm
