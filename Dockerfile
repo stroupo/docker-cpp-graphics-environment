@@ -1,4 +1,4 @@
-from lyrahgames/gcc-cmake-eigen-doctest:latest
+from lyrahgames/cpp-test-tools:latest
 
 label maintainer="markuspawellek@gmail.com"
 
@@ -27,3 +27,14 @@ run \
   cmake --build . --target install
 workdir /
 run rm -rf /tmp/glm
+
+# install latest Eigen library
+workdir /tmp
+run git clone https://github.com/eigenteam/eigen-git-mirror.git --depth=1 --branch master --single-branch eigen
+workdir eigen/build
+run \
+  cmake -D CMAKE_BUILD_TYPE=Release .. && \
+  cmake --build . && \
+  cmake --build . --target install
+workdir /
+run rm -rf /tmp/eigen
