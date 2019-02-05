@@ -1,4 +1,4 @@
-from lyrahgames/cpp-test-tools:latest
+from stroupo/cpp-test-tools:latest
 
 label maintainer="markuspawellek@gmail.com"
 
@@ -7,7 +7,7 @@ arg BUILD_DATE
 label \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/lyrahgames/docker-graphics-environment.git"
+  org.label-schema.vcs-url="https://github.com/stroupo/docker-graphics-environment.git"
 
 run \
   apt-get update && \
