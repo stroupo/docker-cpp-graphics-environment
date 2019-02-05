@@ -7,7 +7,7 @@ arg BUILD_DATE
 label \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/stroupo/docker-graphics-environment.git"
+  org.label-schema.vcs-url="https://github.com/stroupo/docker-cpp-graphics-environment.git"
 
 run \
   apt-get update && \
